@@ -262,8 +262,8 @@ function INFOPANEL:Think()
 				return
 		end
 
-		self.total:SetText( timeToStr( ply:GetUTime() + CurTime() - ply:GetUTimeStart() ) )
-		self.session:SetText( timeToStr( CurTime() - ply:GetUTimeStart() ) )
+		self.total:SetText( timeToStr( ply:GetUTimeTotalTime() ) )
+		self.session:SetText( timeToStr( ply:GetUTimeSessionTime() ) )
 		self.nick:SetText( ply:Nick() )
 end
 
